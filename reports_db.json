@@ -1,0 +1,66 @@
+[
+  {
+    "id": "rep-101",
+    "title": "Major Pothole on Market Street",
+    "description": "There is an extremely deep pothole in the middle lane of Market St near 4th St. Multiple cars have swerved to avoid it, causing near-accidents. It is a major hazard, especially for motorcyclists and cyclists.",
+    "category": "Road Hazards",
+    "severity": "High",
+    "department": "Department of Transportation",
+    "status": "Pending",
+    "location": {
+      "lat": 37.7845,
+      "lng": -122.4082,
+      "city": "San Francisco"
+    },
+    "image": "",
+    "createdAt": "2026-06-26T01:50:07.831Z"
+  },
+  {
+    "id": "rep-102",
+    "title": "Burst Water Main Leak",
+    "description": "Water is bubbling up rapidly from the sidewalk and flooding the street corner at Post St & Powell St. The water level is starting to reach the store doorsteps. Needs immediate public works intervention.",
+    "category": "Public Utilities",
+    "severity": "Critical",
+    "department": "Department of Public Works",
+    "status": "In Progress",
+    "location": {
+      "lat": 37.7882,
+      "lng": -122.4086,
+      "city": "San Francisco"
+    },
+    "image": "",
+    "createdAt": "2026-06-27T13:50:07.832Z"
+  },
+  {
+    "id": "rep-103",
+    "title": "Overflowing Commercial Trash Bins",
+    "description": "Several restaurant trash bins behind the alley are completely overflowing with garbage bags, spreading onto the pedestrian walkway. It is attracting rodents and creating a very bad smell.",
+    "category": "Sanitation",
+    "severity": "Medium",
+    "department": "Department of Sanitation",
+    "status": "Resolved",
+    "location": {
+      "lat": 37.7954,
+      "lng": -122.4028,
+      "city": "San Francisco"
+    },
+    "image": "",
+    "createdAt": "2026-06-25T01:50:07.832Z"
+  },
+  {
+    "id": "rep-104",
+    "title": "Flickering/Damaged Streetlights",
+    "description": "Three consecutive streetlights are completely out on Valencia St between 16th and 17th. This makes the street pitch black at night, which raises safety concerns for pedestrians walking home.",
+    "category": "Public Safety",
+    "severity": "Medium",
+    "department": "Department of Transportation",
+    "status": "In Progress",
+    "location": {
+      "lat": 37.7648,
+      "lng": -122.4219,
+      "city": "San Francisco"
+    },
+    "image": "",
+    "createdAt": "2026-06-27T01:50:07.832Z"
+  }
+]
