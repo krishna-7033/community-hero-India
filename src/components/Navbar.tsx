@@ -50,7 +50,7 @@ export default function Navbar({ currentView, onNavigate, isAdmin, onLogout }: N
           >
             <div className="bg-white p-1.5 rounded-xl shadow-md border border-slate-100 flex items-center justify-center transition-transform hover:scale-105 overflow-hidden w-11 h-11">
               <img
-                src="/src/assets/images/community_logo_1782575199269.jpg"
+                src="/images/community_logo.jpg"
                 alt="Community Hero"
                 className="w-full h-full object-cover rounded-lg"
                 referrerPolicy="no-referrer"
@@ -82,7 +82,9 @@ export default function Navbar({ currentView, onNavigate, isAdmin, onLogout }: N
                       : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
                   }`}
                 >
-                  <Icon className={`w-4 h-4 ${isActive ? "text-blue-600" : "text-slate-400"}`} />
+                  <Icon
+                    className={`w-4 h-4 ${isActive ? "text-blue-600" : "text-slate-400"}`}
+                  />
                   <span>{item.label}</span>
                 </button>
               );
@@ -95,7 +97,9 @@ export default function Navbar({ currentView, onNavigate, isAdmin, onLogout }: N
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
                 </span>
-                <span className="text-[10px] font-mono text-amber-700 font-bold uppercase tracking-widest mr-1">Admin</span>
+                <span className="text-[10px] font-mono text-amber-700 font-bold uppercase tracking-widest mr-1">
+                  Admin
+                </span>
                 <button
                   id="nav-item-dashboard"
                   onClick={() => onNavigate("dashboard")}
@@ -137,9 +141,13 @@ export default function Navbar({ currentView, onNavigate, isAdmin, onLogout }: N
                     : "bg-slate-900 text-slate-100 hover:bg-slate-800 border border-slate-800 hover:border-amber-500/40 shadow-md"
                 }`}
               >
-                <Lock className={`w-3.5 h-3.5 ${currentView === "login" ? "text-white" : "text-amber-400 animate-pulse"}`} />
+                <Lock
+                  className={`w-3.5 h-3.5 ${currentView === "login" ? "text-white" : "text-amber-400 animate-pulse"}`}
+                />
                 <span>Admin Login</span>
-                <span className="text-[9px] px-1 py-0.5 rounded bg-slate-800 text-amber-400 border border-slate-700 uppercase font-mono tracking-wider font-bold">Staff</span>
+                <span className="text-[9px] px-1 py-0.5 rounded bg-slate-800 text-amber-400 border border-slate-700 uppercase font-mono tracking-wider font-bold">
+                  Staff
+                </span>
               </button>
             )}
           </div>
@@ -151,7 +159,11 @@ export default function Navbar({ currentView, onNavigate, isAdmin, onLogout }: N
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -159,7 +171,10 @@ export default function Navbar({ currentView, onNavigate, isAdmin, onLogout }: N
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div id="mobile-menu" className="md:hidden bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-100 px-4 pt-2 pb-4 space-y-1">
+        <div
+          id="mobile-menu"
+          className="md:hidden bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-100 px-4 pt-2 pb-4 space-y-1"
+        >
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = currentView === item.id;
@@ -172,7 +187,9 @@ export default function Navbar({ currentView, onNavigate, isAdmin, onLogout }: N
                   setIsMobileMenuOpen(false);
                 }}
                 className={`flex items-center space-x-3 w-full px-4 py-3 rounded-xl text-base font-medium ${
-                  isActive ? "bg-blue-50 text-blue-600" : "text-slate-600 hover:bg-slate-50"
+                  isActive
+                    ? "bg-blue-50 text-blue-600"
+                    : "text-slate-600 hover:bg-slate-50"
                 }`}
               >
                 <Icon className="w-5 h-5 text-slate-400" />
@@ -188,7 +205,9 @@ export default function Navbar({ currentView, onNavigate, isAdmin, onLogout }: N
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
                 </span>
-                <span className="text-[10px] font-mono text-amber-800 font-bold uppercase tracking-wider">Administrative Zone</span>
+                <span className="text-[10px] font-mono text-amber-800 font-bold uppercase tracking-wider">
+                  Administrative Zone
+                </span>
               </div>
               <button
                 id="mobile-nav-item-dashboard"
@@ -202,7 +221,9 @@ export default function Navbar({ currentView, onNavigate, isAdmin, onLogout }: N
                     : "text-amber-950 hover:bg-amber-100/50"
                 }`}
               >
-                <LayoutDashboard className={`w-5 h-5 ${currentView === "dashboard" ? "text-white" : "text-amber-600"}`} />
+                <LayoutDashboard
+                  className={`w-5 h-5 ${currentView === "dashboard" ? "text-white" : "text-amber-600"}`}
+                />
                 <span>Dashboard</span>
               </button>
             </div>
@@ -235,9 +256,13 @@ export default function Navbar({ currentView, onNavigate, isAdmin, onLogout }: N
                     : "bg-slate-900 text-slate-100 border border-slate-800"
                 }`}
               >
-                <Lock className={`w-4 h-4 ${currentView === "login" ? "text-white" : "text-amber-400 animate-pulse"}`} />
+                <Lock
+                  className={`w-4 h-4 ${currentView === "login" ? "text-white" : "text-amber-400 animate-pulse"}`}
+                />
                 <span>Admin Login</span>
-                <span className="text-[9px] px-1.5 py-0.5 rounded bg-slate-800 text-amber-400 font-mono tracking-wider font-bold">Staff</span>
+                <span className="text-[9px] px-1.5 py-0.5 rounded bg-slate-800 text-amber-400 font-mono tracking-wider font-bold">
+                  Staff
+                </span>
               </button>
             )}
           </div>

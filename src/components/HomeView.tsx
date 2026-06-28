@@ -77,7 +77,10 @@ export default function HomeView({ onNavigate, stats }: HomeViewProps) {
   return (
     <div id="home-view" className="space-y-24">
       {/* Hero Section */}
-      <section id="hero-section" className="relative pt-32 pb-16 overflow-hidden">
+      <section
+        id="hero-section"
+        className="relative pt-32 pb-16 overflow-hidden"
+      >
         {/* Abstract Background Accents */}
         <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl -z-10"></div>
         <div className="absolute top-1/2 right-1/4 w-80 h-80 bg-cyan-200/20 rounded-full blur-3xl -z-10"></div>
@@ -95,11 +98,16 @@ export default function HomeView({ onNavigate, stats }: HomeViewProps) {
 
               <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-slate-900 leading-tight tracking-tight">
                 Empowering Communities <br className="hidden sm:inline" />
-                Through <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">AI</span>
+                Through{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+                  AI
+                </span>
               </h1>
 
               <p className="text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Report civic issues, track their progress, and let AI intelligently classify every complaint for faster action. Join us in building safer, cleaner, and smarter neighborhoods.
+                Report civic issues, track their progress, and let AI
+                intelligently classify every complaint for faster action. Join
+                us in building safer, cleaner, and smarter neighborhoods.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -129,20 +137,24 @@ export default function HomeView({ onNavigate, stats }: HomeViewProps) {
                 <div className="relative bg-white p-4 rounded-3xl shadow-2xl border border-slate-100 overflow-hidden group">
                   <img
                     id="hero-city-graphic"
-                    src="/src/assets/images/city_hero_illustration_1782571165907.png"
+                    src="images/city_hero_illustration_.png"
                     alt="Community Hero Smart City illustration"
                     className="w-full h-auto rounded-2xl object-cover transform hover:scale-[1.02] transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />
-                  
+
                   {/* Floating AI badge */}
                   <div className="absolute bottom-8 left-8 bg-slate-900/90 backdrop-blur-md border border-slate-700/50 p-4 rounded-2xl text-white flex items-center space-x-3 shadow-xl">
                     <div className="bg-blue-500 p-2 rounded-lg">
                       <BrainCircuit className="w-5 h-5 text-white animate-pulse" />
                     </div>
                     <div>
-                      <span className="block text-[10px] font-mono tracking-wider text-cyan-400 uppercase">Analysis Engine</span>
-                      <span className="font-display font-semibold text-sm text-slate-100">AI Classification Live</span>
+                      <span className="block text-[10px] font-mono tracking-wider text-cyan-400 uppercase">
+                        Analysis Engine
+                      </span>
+                      <span className="font-display font-semibold text-sm text-slate-100">
+                        AI Classification Live
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -153,11 +165,19 @@ export default function HomeView({ onNavigate, stats }: HomeViewProps) {
       </section>
 
       {/* Statistics Section */}
-      <section id="stats-section" className="bg-white py-16 border-y border-slate-100 relative overflow-hidden">
+      <section
+        id="stats-section"
+        className="bg-white py-16 border-y border-slate-100 relative overflow-hidden"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-display font-bold text-3xl text-slate-900">Platform Real-time Activity</h2>
-            <p className="text-slate-500 mt-2 text-sm">Active records synchronized across local municipalities and community channels.</p>
+            <h2 className="font-display font-bold text-3xl text-slate-900">
+              Platform Real-time Activity
+            </h2>
+            <p className="text-slate-500 mt-2 text-sm">
+              Active records synchronized across local municipalities and
+              community channels.
+            </p>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -225,7 +245,10 @@ export default function HomeView({ onNavigate, stats }: HomeViewProps) {
       </section>
 
       {/* Features Section */}
-      <section id="features-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        id="features-section"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-blue-600 font-mono font-bold uppercase tracking-wider text-[10px] px-3 py-1 bg-blue-50 rounded-full">
             What We Do
@@ -234,7 +257,8 @@ export default function HomeView({ onNavigate, stats }: HomeViewProps) {
             Smart Solutions for Civic Management
           </h2>
           <p className="text-slate-500 text-sm leading-relaxed max-w-2xl mx-auto">
-            We bridge the communication gap between citizens and local authorities using modern artificial intelligence capabilities.
+            We bridge the communication gap between citizens and local
+            authorities using modern artificial intelligence capabilities.
           </p>
         </div>
 
@@ -249,7 +273,9 @@ export default function HomeView({ onNavigate, stats }: HomeViewProps) {
               >
                 <div>
                   <div className="flex justify-between items-start">
-                    <div className={`p-4 rounded-2xl bg-gradient-to-br ${feature.color} text-white shadow-md`}>
+                    <div
+                      className={`p-4 rounded-2xl bg-gradient-to-br ${feature.color} text-white shadow-md`}
+                    >
                       <IconComponent className="w-6 h-6" />
                     </div>
                     <span className="text-[10px] font-mono bg-slate-50 border border-slate-100 text-slate-500 font-bold px-3 py-1 rounded-full uppercase tracking-wider">
