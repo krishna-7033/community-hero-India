@@ -68,9 +68,9 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 space-y-4 sm:space-y-0">
           <span>&copy; {new Date().getFullYear()} Community Hero. Open-source municipal software initiative.</span>
           <span className="flex items-center space-x-1.5 text-slate-400">
-            <span className="bg-blue-900/40 text-blue-400 px-2.5 py-1 rounded-full font-mono text-[9px] border border-blue-800/30">
+            {/* <span className="bg-blue-900/40 text-blue-400 px-2.5 py-1 rounded-full font-mono text-[9px] border border-blue-800/30">
               PROTOTYPE v1.0.0
-            </span>
+            </span> */}
           </span>
         </div>
       </div>
