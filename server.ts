@@ -597,7 +597,7 @@ Determine the most appropriate:
 Return ONLY a structured JSON response matching this schema. Do not include markdown formatting or backticks outside the json structure.`;
 
     const response = await client.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: "gemini-2.5-flash",
       contents: prompt,
       config: {
         responseMimeType: "application/json",
@@ -606,24 +606,26 @@ Return ONLY a structured JSON response matching this schema. Do not include mark
           properties: {
             category: {
               type: Type.STRING,
-              description: "Must be one of ['Road Hazards', 'Public Utilities', 'Sanitation', 'Public Safety', 'Environmental', 'Other']"
+              description:
+                "Must be one of ['Road Hazards', 'Public Utilities', 'Sanitation', 'Public Safety', 'Environmental', 'Other']",
             },
             severity: {
               type: Type.STRING,
-              description: "Must be one of ['Low', 'Medium', 'High', 'Critical']"
+              description:
+                "Must be one of ['Low', 'Medium', 'High', 'Critical']",
             },
             department: {
               type: Type.STRING,
-              description: "The department name responsible for this issue"
+              description: "The department name responsible for this issue",
             },
             explanation: {
               type: Type.STRING,
-              description: "Brief sentence explaining classification decision"
-            }
+              description: "Brief sentence explaining classification decision",
+            },
           },
-          required: ["category", "severity", "department", "explanation"]
-        }
-      }
+          required: ["category", "severity", "department", "explanation"],
+        },
+      },
     });
 
     const resultText = response.text || "";
@@ -717,11 +719,11 @@ Be concise and avoid overly technical jargon. Always be polite and encouraging o
     // Map conversation history to ChatMessage structures if history exists
     // The chats.create endpoint from @google/genai supports systemInstruction in config
     const chat = client.chats.create({
-      model: "gemini-3.5-flash",
+      model: "gemini-2.5-flash",
       config: {
         systemInstruction,
-        temperature: 0.7
-      }
+        temperature: 0.7,
+      },
     });
 
     // In @google/genai, chat.sendMessage expects an object: { message: string }
@@ -731,7 +733,8 @@ Be concise and avoid overly technical jargon. Always be polite and encouraging o
   } catch (error: any) {
     console.error("Gemini Assistant Error, falling back to offline assistant:", error);
     // Offline / Mock assistant response integrated beautifully as a fallback response
-    let reply = "Hello! I am having trouble connecting to my central AI systems right now due to temporary high demand on servers. However, I can still assist you offline: ";
+    let reply =
+      "Hello! The AI assistant is temporarily busy due to high demand. You can still use all Community Hero features while I automatically retry your request. However, I can still assist you offline: ";
     const msgLower = message.toLowerCase();
     if (msgLower.includes("pothole")) {
       reply += "To report a pothole, click on 'Report Issue' in the menu. Enter a description and location, then click 'Analyze with AI' to automatically categorize it under 'Road Hazards'. Finally, upload an optional photo and hit Submit!";
